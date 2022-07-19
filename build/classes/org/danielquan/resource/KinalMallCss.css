@@ -1,0 +1,53 @@
+.menu-bar {
+    -fx-background-color: derive(#4f6e83,20%);
+}
+
+
+.context-menu {
+    -fx-background-color: derive(#4f6e83,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 11pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+.anchorPane {
+    -fx-background-color: #CFA431;
+}
+
+.anchorPane2 {
+    -fx-background-color:  #7085a2;
+}
+
+.anchorPane3{
+    -fx-background-color: derive(#4f6e83,20%);
+}
+
+.label2 {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 28pt;
+    -fx-font-family: "EucrosiaUPC";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+    
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-font-size: 14pt;
+    -fx-text-fill: #ffffff; 
+}
+
+.button :hover{
+    -fx-font-size: 13.5pt;
+    -fx-text-fill: #ffffff; 
+}
+.button :pressed {
+    -fx-font-size: 12pt;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #ffffff;
+}
+
+

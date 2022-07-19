@@ -1,0 +1,32 @@
+.menubar1:hover{
+    -fx-background-color: transparent;
+    -fx-border-color: #660099;
+    -fx-border-width: 0 0 3 0;
+}
+
+.menubar3:hover{
+    -fx-border-color: #00F0FF;
+     -fx-background-color: transparent;
+    -fx-border-width: 0 0 3 0;
+}
+
+.menubar4:hover{
+    -fx-border-color: #ff0033;
+     -fx-background-color: transparent;
+    -fx-border-width: 0 0 3 0;
+}
+
+.menubar1 .menu:hover{
+    -fx-background-color: transparent;
+}
+
+.menubar3 .menu:hover{
+    -fx-background-color: transparent;
+} 
+
+.menubar4 .menu:hover{
+    -fx-background-color: transparent;
+} 
+
+
+

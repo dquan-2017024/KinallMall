@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="900.0" styleClass="anchorPane" stylesheets="@../resource/KinalMallCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarillas.controller.HorariosController">
+   <children>
+      <AnchorPane layoutX="656.0" layoutY="-80.0" prefHeight="143.0" prefWidth="151.0" rotate="56.3" styleClass="anchorPane2" />
+      <AnchorPane layoutX="575.0" layoutY="358.0" prefHeight="143.0" prefWidth="151.0" rotate="26.6" styleClass="anchorPane2" />
+      <AnchorPane layoutX="228.0" layoutY="-110.0" prefHeight="143.0" prefWidth="151.0" rotate="38.7" styleClass="anchorPane2" />
+      <AnchorPane prefHeight="420.0" prefWidth="150.0" styleClass="anchorPane2" stylesheets="@../resource/KinalMallCss.css">
+         <children>
+            <VBox layoutY="168.0" prefHeight="178.0" prefWidth="168.0" stylesheets="@../resource/TableCss.css">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="168.0" styleClass="button1" stylesheets="@../resource/KinalMallCss.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="27.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="35.0" prefWidth="168.0" styleClass="button1" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="35.0" prefWidth="168.0" styleClass="button1" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="35.0" prefWidth="168.0" styleClass="button1" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <ImageView fitHeight="54.0" fitWidth="50.0" layoutY="367.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/RetornoIcono.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="1.0" prefHeight="127.0" prefWidth="226.0">
+         <children>
+            <ImageView fitHeight="82.0" fitWidth="77.0" layoutX="16.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Horarios.png" />
+               </image></ImageView>
+            <ImageView fitHeight="118.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FrameFoto.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="42.0" prefHeight="30.0" prefWidth="98.0" style="-fx-text-fill: ffffffff; -fx-font-size: 16;" text="Horarios" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="200.0" layoutY="1.0" prefHeight="93.0" prefWidth="660.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="97.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="142.0" minWidth="10.0" prefWidth="104.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="101.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="115.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="106.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="136.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="32.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Codigo Horario" />
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Horario Entrada" GridPane.columnIndex="2" />
+            <TextField fx:id="txtCodigoHorario" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtHorarioEntrada" editable="false" GridPane.columnIndex="3" />
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Lunes" GridPane.rowIndex="1" />
+            <Label style="-fx-font-size: 13; -fx-text-fill: ffffffff;" text="Horario Salida" GridPane.columnIndex="4" />
+            <Label style="-fx-font-size: 13; -fx-text-fill: ffffffff;" text="Martes" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label style="-fx-font-size: 13; -fx-text-fill: ffffffff;" text="Miércoles" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Label style="-fx-font-size: 13; -fx-text-fill: ffffffff;" text="Jueves" GridPane.rowIndex="2" />
+            <Label style="-fx-font-size: 13; -fx-text-fill: ffffffff;" text="Viernes" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <TextField fx:id="txtHorarioSalida" editable="false" prefHeight="24.0" prefWidth="196.0" GridPane.columnIndex="5" />
+            <TextField fx:id="txtLunes" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtMartes" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtMiercoles" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="txtJueves" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtViernes" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <TableView fx:id="tblHorarios" layoutX="172.0" layoutY="106.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="300.0" prefWidth="706.0" stylesheets="@../resource/TableCss.css">
+        <columns>
+          <TableColumn fx:id="colCodigoHorario" prefWidth="98.0" text="Codigo Horario" />
+          <TableColumn fx:id="colHorarioEntrada" prefWidth="96.0" text="Entrada" />
+            <TableColumn fx:id="colHorarioSalida" prefWidth="98.0" text="Salida" />
+            <TableColumn fx:id="colLunes" prefWidth="97.0" text="Lunes" />
+            <TableColumn fx:id="colMartes" prefWidth="83.0" text="Martes" />
+            <TableColumn fx:id="colMiercoles" prefWidth="88.0" text="Miércoles" />
+            <TableColumn fx:id="colJueves" prefWidth="74.0" text="Jueves" />
+            <TableColumn fx:id="colViernes" prefWidth="71.0" text="Viernes" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="405.0" style="-fx-background-color: #1FB6FF;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danielquan.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="447.0" fitWidth="455.0" layoutX="-35.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/KinaMall2.5.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-2.0" layoutY="-6.0" prefHeight="25.0" prefWidth="414.0" style="-fx-background-color: #026B9E;" styleClass="anchorPane3" stylesheets="@../resource/KinalMallCss.css">
+         <children>
+            <MenuBar layoutX="100.0" layoutY="6.0" prefHeight="32.0" prefWidth="87.0" style="-fx-background-color: transparent;">
+              <menus>
+                <Menu mnemonicParsing="false" styleClass="menubar1" text="Modulos">
+                  <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaDepartamento" text="Departamentos" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaCargos" style="-fx-border-color: transparent; -fx-border-width: 0px 0px 0px 0px;" text="Cargos" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaHorarios" style="-fx-border-color: transparent; -fx-border-width: 0px 0px 0px 0px;" text="Horarios" />
+                    <MenuItem mnemonicParsing="false" onAction="#ventanaAdministracion" style="-fx-border-color: transparent; -fx-border-width: 0px 0px 0px 0px;" text="Administracion" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaTipoCliente" style="-fx-border-color: transparent; -fx-border-width: 0px 0px 0px 0px;" text="Tipo Clientes" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaLocales" style="-fx-border-color: transparent; -fx-border-width: 0px 0px 0px 0px;" text="Locales" />
+                        <MenuItem mnemonicParsing="false" onAction="#ventanaProveedor" text="Proveedores" />
+                  </items>
+                </Menu>
+              </menus>
+               <stylesheets>
+                  <URL value="@../resource/KinalMallCss.css" />
+                  <URL value="@../resource/MenubarCss.css" />
+               </stylesheets>
+               <styleClass>
+                  <String fx:value="menubar1" />
+                  <String fx:value="menu-bar" />
+               </styleClass>
+            </MenuBar>
+            <Button fx:id="btnCerrar" layoutX="361.0" layoutY="3.0" mnemonicParsing="false" onAction="#handleCloseButtonAction" prefHeight="32.0" prefWidth="53.0" style="-fx-background-color: transparent;">
+               <graphic>
+                  <ImageView fx:id="imgCerrar" fitHeight="25.0" fitWidth="32.0" onMouseClicked="#handleCloseButtonAction" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Salir.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="btnMinimizar" layoutX="-6.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleMinimizeButtonAction">
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/Minimizar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <MenuBar layoutX="262.0" layoutY="7.0" style="-fx-background-color: transparent;" styleClass="menubar3" stylesheets="@../resource/MenubarCss.css">
+               <menus>
+                <Menu mnemonicParsing="false" text="?">
+                  <items>
+                    <MenuItem fx:id="mniAbout" mnemonicParsing="false" onAction="#ventanaProgramador" text="About" />
+                  </items>
+                </Menu>
+               </menus>
+            </MenuBar>
+            <MenuBar layoutX="175.0" layoutY="6.0" style="-fx-background-color: transparent;" styleClass="menubar4" stylesheets="@../resource/MenubarCss.css">
+               <menus>
+                <Menu mnemonicParsing="false" text="Reportes">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+               </menus>
+            </MenuBar>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="587.0" styleClass="anchorPane" stylesheets="@../resource/KinalMallCss.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.javierbarillas.controller.UsuarioController">
+   <children>
+      <AnchorPane layoutX="474.0" layoutY="-93.0" prefHeight="143.0" prefWidth="151.0" rotate="56.3" styleClass="anchorPane2" />
+      <AnchorPane layoutX="318.0" layoutY="349.0" prefHeight="143.0" prefWidth="151.0" rotate="26.6" styleClass="anchorPane2" />
+      <AnchorPane layoutX="228.0" layoutY="-110.0" prefHeight="143.0" prefWidth="151.0" rotate="38.7" styleClass="anchorPane2" />
+      <AnchorPane prefHeight="420.0" prefWidth="150.0" styleClass="anchorPane2" stylesheets="@../resource/KinalMallCss.css">
+         <children>
+            <VBox layoutY="177.0" prefHeight="178.0" prefWidth="168.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="35.0" prefWidth="168.0" stylesheets="@../resource/KinalMallCss.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="27.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Nuevo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#cancelar" prefHeight="35.0" prefWidth="168.0" text="Cancelar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Cerrar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Pane layoutY="1.0" prefHeight="127.0" prefWidth="226.0">
+         <children>
+            <ImageView fitHeight="87.0" fitWidth="104.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Usuarios.png" />
+               </image></ImageView>
+            <ImageView fitHeight="118.0" fitWidth="193.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/FrameFoto.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="97.0" layoutY="42.0" prefHeight="30.0" prefWidth="98.0" style="-fx-text-fill: ffffffff; -fx-font-size: 16;" text="Usuario" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="5.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <GridPane layoutX="218.0" layoutY="65.0" prefHeight="290.0" prefWidth="302.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="121.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="89.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="65.0" minHeight="1.0" prefHeight="57.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Codigo Usuario" />
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Nombre" GridPane.rowIndex="1" />
+            <Label style="-fx-font-size: 13; -fx-text-fill: ffffffff;" text="Apellido" GridPane.rowIndex="2" />
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Usuario" GridPane.rowIndex="3" />
+            <Label prefHeight="17.0" prefWidth="125.0" style="-fx-font-size: 13; -fx-text-fill: ffffff;" text="Contraseña" GridPane.rowIndex="4" />
+            <TextField fx:id="txtCodigoUsuario" editable="false" GridPane.columnIndex="1" />
+            <TextField fx:id="txtNombreUsuario" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtApellidoUsuario" editable="false" prefHeight="24.0" prefWidth="157.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtUsuarioLogin" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtcontrasena" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Label layoutX="275.0" layoutY="20.0" style="-fx-text-fill: ffffff; -fx-font-size: 25;" text="Ingrese Sus Datos" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdminIndividual" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d77b6e00-4fe1-4234-974d-78af6c886a0a">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codAdministracion" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_BuscarAdministracion($P{codAdministracion});]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="356" width="400" height="396" uuid="98826662-d0c7-490f-bdab-3418ea1da89c"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="-21" width="400" height="400" uuid="fde59f88-0106-43b3-b2e8-5417afea3054"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="191" y="-21" width="400" height="400" uuid="b9798577-6d49-4b3e-9550-772b3923eec9"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte2.png"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="81" y="15" width="110" height="20" uuid="98b8216d-f847-4f01-93d4-3da5cc9b69e2"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Administracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="245" y="15" width="110" height="20" uuid="171d0716-2edc-407d-a5c6-4a667061ea5b"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="408" y="15" width="110" height="20" uuid="999fb930-34e6-41de-9df4-7e3a8299f5c8"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Teléfono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="81" y="37" width="110" height="20" uuid="10dc926c-dcdf-4a49-9b50-3428341a76ea"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="245" y="37" width="110" height="20" uuid="1923d04b-a483-4d39-b705-a6e34c8c64a2"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="408" y="37" width="110" height="20" uuid="86ae4bb8-f859-404a-b31c-2d55d1ac4325"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

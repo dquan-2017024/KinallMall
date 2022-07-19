@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteEmpleado" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="69bfd980-2ab1-427f-b273-81e01090b293">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="empleado" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from empleados inner join cargos on empleados.cargos = cargos.codigoCargo
+	inner join departamentos on empleados.departamentos = departamentos.codigoDepartamento
+	inner join horarios on empleados.horarios = horarios.codigoHorario
+		where codigoEmpleado = $P{empleado};]]>
+	</queryString>
+	<field name="codigoEmpleado" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correoElectronico" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoEmpleado" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaContratacion" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sueldo" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="departamentos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="cargos" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarios" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="administracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCargo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreCargo" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoDepartamento" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreDepartamento" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoHorario" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioEntrada" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horarioSalida" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lunes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="martes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="miercoles" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jueves" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="viernes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="555" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="155" width="400" height="400" uuid="61d12015-49f9-49ff-a888-560585632303"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="0" width="400" height="400" uuid="ec3d484f-bb5f-4aa4-9421-bbece87610d9"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="421" y="-19" width="400" height="400" uuid="d821dd55-876b-4dd0-918d-0346774db9c9"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte2.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="101" splitType="Stretch">
+			<image>
+				<reportElement x="90" y="0" width="83" height="99" uuid="e53de372-d57d-4f7b-b3a0-a86a76a0feef"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Icono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="333" y="0" width="123" height="37" uuid="a2d8a874-22e1-4522-92cc-e882ce222231"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="20"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="308" y="62" width="173" height="37" uuid="01d78bd8-2c09-47ad-9dd7-8fccca356be3"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="15" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Empleados]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="39" splitType="Stretch">
+			<rectangle>
+				<reportElement x="72" y="0" width="730" height="29" forecolor="#FFFFFF" backcolor="#B68C78" uuid="9f500c58-d720-485a-9975-41fe13817d55"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="73" y="9" width="100" height="20" forecolor="#FAFAFA" uuid="87b7238a-25f9-48a0-9094-3f0ad7c0d869"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="202" y="9" width="198" height="20" forecolor="#FAFAFA" uuid="fd53ff70-36cb-4d40-b9ca-58af6fdc97a5"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="421" y="9" width="100" height="20" forecolor="#FAFAFA" uuid="d9a04ca0-0362-4ee8-81d4-68fafc740def"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="544" y="9" width="100" height="20" forecolor="#FAFAFA" uuid="857c34cb-587e-480e-a67c-391f057540d3"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Departamento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="670" y="9" width="132" height="20" forecolor="#FAFAFA" uuid="0803a16c-4d32-4e8c-b22e-662c18dfb67f"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Horario]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField>
+				<reportElement x="73" y="0" width="100" height="20" uuid="05e0bf9e-f0e9-469d-b696-b3c3115b012d"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="202" y="0" width="100" height="20" uuid="c54a2a19-4df2-41d1-ac4e-564a363a8da4"/>
+				<textElement textAlignment="Right">
+					<font isBold="false" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="308" y="0" width="98" height="20" uuid="f826cb7f-8b0c-4e1f-9224-8c8041b06d60"/>
+				<textElement>
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidoEmpleado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="0" width="100" height="20" uuid="3365c2b3-591b-4749-b235-7a316689900d"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreCargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="544" y="0" width="100" height="20" uuid="55fd5563-b21b-4b8e-922a-412c111c9da0"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreDepartamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="670" y="0" width="40" height="20" uuid="17b108cf-489b-4157-a041-f86ebc088080"/>
+				<textElement textAlignment="Right">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horarioEntrada}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="749" y="0" width="53" height="20" uuid="cfdbeaa3-0d4e-43d9-a23c-c54010e4d429"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horarioSalida}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="710" y="0" width="39" height="20" uuid="48e737e2-af0f-4516-ae52-ceb3beea96d0"/>
+				<textElement textAlignment="Center">
+					<font isItalic="true"/>
+				</textElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<line>
+				<reportElement x="73" y="33" width="729" height="1" uuid="dd024ad9-741c-4900-b8de-7db0c7d9854c"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

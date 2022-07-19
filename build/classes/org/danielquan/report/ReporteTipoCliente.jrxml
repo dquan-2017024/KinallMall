@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAdministracion" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c007e9dd-ee69-4e49-8ff1-14f5a00ccfe9">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<subDataset name="dataset1" uuid="aa9254d9-058a-4be6-b53c-fac1f846feab"/>
+	<queryString>
+		<![CDATA[call sp_ListarTipoClientes();]]>
+	</queryString>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<image>
+				<reportElement x="193" y="-19" width="400" height="400" uuid="0a156166-d159-4dfd-9ccf-0ee63dfeb836"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte2.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="-19" width="400" height="400" uuid="73cf1b79-41fd-438b-9cc3-e1de83ba28b7"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte.jpg"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="0" y="352" width="400" height="400" uuid="4a328621-1ab4-4a1c-b6a5-48f05f22f369"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Reporte.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</background>
+	<title>
+		<band height="99" splitType="Stretch">
+			<image>
+				<reportElement x="43" y="0" width="83" height="99" uuid="43fbc0fa-39a0-4541-af91-bd8ee68559db"/>
+				<imageExpression><![CDATA["C:\\Users\\Gonzalez\\Desktop\\NetBeans\\KinalMall2017174\\src\\org\\javierbarillas\\images\\Icono.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="227" y="0" width="123" height="37" uuid="19ebb5b9-731c-4c28-af2f-c865eaab704f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="20"/>
+				</textElement>
+				<text><![CDATA[Kinal Mall]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="205" y="62" width="173" height="37" uuid="0e64550b-8617-4e7e-aba5-538fa2e0e722"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial Black" size="15" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Cliente]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="48" splitType="Stretch">
+			<rectangle>
+				<reportElement x="63" y="12" width="457" height="29" forecolor="#FFFFFF" backcolor="#B68C78" uuid="928751f5-61b0-447c-9c4f-3f59e053b3fc"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="337" y="21" width="119" height="20" forecolor="#FFFFFF" uuid="c05a8479-e34b-4991-b5d2-d31eb9a9a8ec"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="75" y="21" width="150" height="20" forecolor="#FFFFFF" uuid="459e0318-42dd-4874-987d-f3f49916175f"/>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Codigo Administración]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="39" splitType="Stretch">
+			<line>
+				<reportElement x="63" y="30" width="457" height="1" uuid="debc7385-2042-4913-8ccd-0ee8f97f5479"/>
+				<graphicElement>
+					<pen lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="337" y="0" width="119" height="20" forecolor="#000000" uuid="f6a61fdc-4937-4827-a84f-43bc785f7212"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="75" y="0" width="150" height="20" uuid="80ba3ad9-789a-4bb4-b8ed-e4a27e56c551"/>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoTipoCliente}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="361" y="34" width="211" height="20" uuid="cde5a43e-6f4e-473f-b43b-e528a6cab895"/>
+				<text><![CDATA[Javier Alejandro Barillas González 2017174]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
